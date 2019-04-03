@@ -21,13 +21,15 @@ class App extends Component {
                         <p className="App-intro">Replace the React icon with a dog!</p>
                     )}
 
+                    {error && <p style={{color: "red"}}>Uh oh - something went wrong! {error.message}</p>}
+
                     {fetching ? (
                         <button disabled>Fetching...</button>
                     ) : (
                         <button onClick={onRequestDog}>Request a Dog</button>
                     )}
 
-                    {error && <p style={{color: "red"}}>Uh oh - something went wrong!</p>}
+
                 </header>
             </div>
         );
